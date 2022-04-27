@@ -15,3 +15,5 @@ So we have learned to ask it this way, with no breaks between words:
 We are all eager to play something but no one wants to choose the game.
 
 This app is for my family. 
+
+Version 1 -- no styling, predetermined list of games. Super simple.
