@@ -9,8 +9,9 @@ const chooseGame = () => {
 //display result on page
 document.getElementById("chosenGame").innerHTML = chooseGame();
 
-
-
-
+//button to refresh page and display new random choice
+const refreshPage = () => {
+  location.reload();
+}
 
 
