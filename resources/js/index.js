@@ -15,11 +15,20 @@ class OurFavoriteGames {
   }
 
   addGame(name) {
-    const game = {
+    let game = {
       name: document.getElementById('gameName').value,
     }
+    //for testing only
+    console.log('this is the game:' + game.name);
     //need to check if input value already exists in array
-    this.gamesList.push(game)
+    //need to check if input is undefined, doesn't make sense, etc
+
+    if (this.gamesList.includes(game.name) === false)  {
+      this.gamesList.push(game.name)
+    } //for testing only
+    else {
+      console.log('That game ' + game.name + ' is already in the list')
+    }
   }
 }
 
@@ -30,25 +39,25 @@ document.getElementById('addGameForm').addEventListener('submit', function(event
   console.log('It worked!');
   event.preventDefault();
   currentOurFavoriteGames.addGame();
-  console.log(currentOurFavoriteGames.gamesList);
+  console.log(this.gamesList);
 });
 
 //choose random number
-const randomNumber = Math.floor(Math.random() * currentOurFavoriteGames.gamesList.length);
+let randomNumber = Math.floor(Math.random() * currentOurFavoriteGames.gamesList.length);
+
+
+
+
 
 //pick a game from array
 const chooseGame = () => {
-    return currentOurFavoriteGames.gamesList[randomNumber];
+  if (currentOurFavoriteGames.gamesList.name) {
+    return currentOurFavoriteGames.gamesList[randomNumber].name;
+  }
 }
 //display result on page
 document.getElementById("chosenGame").innerHTML = chooseGame();
 
-//display the full array as a test
-const displayTheArray = () => {
-  for (let i = 0; i < currentOurFavoriteGames.gamesList.length; i++) {
-    //what goes here?
-  }
-};
 
 
 
