@@ -30,14 +30,26 @@
     <link rel="stylesheet" href="resources/style.css"/>
 </head>
 <body>
-    <h1>Let's play this:</h1>
-    <!--display result of random choice-->
-    <p id="chosenGame"></p>
-    <!--button that refreshes page with new random choice-->
-    <button type="submit" onClick="refreshPage()">Press for a new game</button>
 
+    <form id="addGameForm">
+        <label for="newGame">Add a new game:</label>
+        <br>
+        <input type="text" id="gameName" name="gameName">
+        <br>
+        <input type="submit" value="Add it">
+    </form>
+   
+    <h1>Let's play this:</h1>
+<button type="submit" onClick="chooseGame()">Our pick</button>
+    <!--display result of random choice-->
+   <p id="chosenGame"></p> 
+    <!--
+    button that refreshes page with new random choice
+    <button type="submit" onClick="refreshPage()">Press for a new game</button>
+    -->
+    
 
     <script src="resources/js/index.js"></script>
 
 </body>
-</html>
+</htgit ml>
