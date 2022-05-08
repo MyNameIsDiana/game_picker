@@ -21,5 +21,17 @@ input[type='submit'], button {
 }
 
 table {
+    margin-left:auto;
+    margin-right:auto;
     text-align: left;
 }
+
+
+.result {
+    text-align: center;
+}
+
+#chosenGame {
+    font-size: 40px;
+}
+
