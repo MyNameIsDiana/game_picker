@@ -39,10 +39,7 @@
     </div>
 
     <div class="form">
-        <form action="javascript:void(0);" method="POST" onsubmit="app.add()">
-        <input type="text" id="add-game">
-        <input type="submit" value="Add" class="btn btn-primary">
-    </form>
+       
     <!--<p>Choosing among these </p>-->
     <p id="number-of-games"></p>
     <table>
@@ -53,6 +50,11 @@
 
         </tbody>
     </table>
+    <p>Want more choices?</p>
+    <form action="javascript:void(0);" method="POST" onsubmit="app.add()">
+        <input type="text" id="add-game" placeholder="Add another one here">
+        <input type="submit" value="Add" class="btn btn-primary">
+    </form>
     </div>
 
     <div id="edit-box">
