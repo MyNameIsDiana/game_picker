@@ -5,6 +5,15 @@
 }
 */
 
+const delayedText = document.getElementById("what-game");
+
+const myMessage = () => {
+  delayedText.innerHTML = "<span style='font-size: 100px'>What game?</span>";
+  console.log("message appears after delay");
+
+}
+setTimeout(myMessage, 500);
+
 const app = new function() {
   this.item = document.getElementById('games');
   //pre-populate with a few family favorites
