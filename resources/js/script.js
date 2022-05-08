@@ -8,7 +8,7 @@
 const delayedText = document.getElementById("what-game");
 
 const myMessage = () => {
-  delayedText.innerHTML = "<span style='font-size: 100px'>What game?</span>";
+  delayedText.innerHTML = "<span style='font-size: 80px'>What game?</span>";
   console.log("message appears after delay");
 
 }
