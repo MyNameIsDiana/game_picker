@@ -45,13 +45,12 @@ const app = new function() {
     item = document.getElementById('edit-game');
     this.item.value = this.games[singleGame];
     document.getElementById('edit-box').style.display = 'block';
-    self = this;
 
     document.getElementById('save-edit').onsubmit = function() {
       let game = item.value;
       if (game) {
-        self.games.splice(singleGame, 1, game);
-        self.fetchAllTheGames();
+        app.games.splice(singleGame, 1, game);
+        app.fetchAllTheGames();
         closeInput();
       }
     }
