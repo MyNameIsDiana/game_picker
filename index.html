@@ -34,15 +34,12 @@
 <body>
 
     <div class="title">
-        <h1>Want to play a game?</h1>
-        <p>What game?</p>
+        <h3>Want to play a game?</h3>
+        <p id="what-game"></p>
     </div>
 
     <div class="form">
-        <form action="javascript:void(0);" method="POST" onsubmit="app.add()">
-        <input type="text" id="add-game">
-        <input type="submit" value="Add" class="btn btn-primary">
-    </form>
+       
     <!--<p>Choosing among these </p>-->
     <p id="number-of-games"></p>
     <table>
@@ -53,8 +50,14 @@
 
         </tbody>
     </table>
+    <br>
+    <p>Feel free to remove my suggestions and add your own!</p>
+    <form action="javascript:void(0);" method="POST" onsubmit="app.add()">
+        <input type="text" id="add-game" placeholder="Add a game here">
+        <input type="submit" value="Add" class="btn btn-primary">
+    </form>
     </div>
-
+<!--
     <div id="edit-box">
         <form action="javascript:void(0);" method="POST" id="save-edit">
             <input type="text" id="edit-game">
@@ -62,17 +65,19 @@
             <a onclick="closeInput()">&#10006;</a>
         </form> 
     </div>
-
-   
-    <h3>Let's play this:</h3>
-    <button id="pickOne"  class="btn btn-success">Pick one</button>
-    <!--display result of random choice-->
-   <p id="chosenGame"></p> 
+-->
+    <div class="result">
+        <h3>Let's play this:</h3>
+        <button id="pickOne"  class="btn btn-success">Pick one</button>
+        <!--display result of random choice-->
+        <br>
+        <br>
+        <p id="chosenGame"></p> 
     <!--
     button that refreshes page with new random choice
     <button type="submit" onClick="refreshPage()">Press for a new game</button>
     -->
-    
+    </div>
 
     <script src="resources/js/script.js"></script>
 

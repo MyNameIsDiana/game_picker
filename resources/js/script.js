@@ -5,6 +5,15 @@
 }
 */
 
+const delayedText = document.getElementById("what-game");
+
+const myMessage = () => {
+  delayedText.innerHTML = "<span style='font-size: 100px'>What game?</span>";
+  console.log("message appears after delay");
+
+}
+setTimeout(myMessage, 500);
+
 const app = new function() {
   this.item = document.getElementById('games');
   //pre-populate with a few family favorites
@@ -16,9 +25,9 @@ const app = new function() {
 
     if (this.games.length > 0) {
       for (i=0; i<this.games.length; i++) {
-        gamesSoFar += '<tr> <td>' + this.games[i]+ '</td';
-        gamesSoFar += '<td><button onclick="app.edit('+i+')" class="btn btn-warning">Edit</button></td>'; 
-        gamesSoFar += '<td><button onclick="app.delete('+i+')" class="btn btn-danger">Delete</button></td>'; 
+        gamesSoFar += '<tr> <td>' + this.games[i] + '</td';
+     //   gamesSoFar += '<td><button onclick="app.edit('+ i +')" class="btn btn-warning">Edit</button></td>'; 
+        gamesSoFar += '<td><button onclick="app.delete('+ i +')" class="btn-sm btn-danger">Delete</button></td>'; 
         gamesSoFar += '</tr>';
       }
     }
@@ -41,6 +50,7 @@ const app = new function() {
   };
 
   //edit
+  /*
   this.edit = function(singleGame) {
     item = document.getElementById('edit-game');
     this.item.value = this.games[singleGame];
@@ -55,7 +65,8 @@ const app = new function() {
       }
     }
   };
-
+  */  
+  
   //delete
   this.delete = function(singleGame) {
     this.games.splice(singleGame, 1)
@@ -64,13 +75,13 @@ const app = new function() {
 
   //count total
   this.total = function(arrayLength) {
-    let result = document.getElementById('number-of-games');
-    let phrase = `Choosing among ${arrayLength} games`;
+    let count = document.getElementById('number-of-games');
+    let phrase = `Choosing from ${arrayLength} games`;
     if (arrayLength >= 2) {
-      result.innerHTML = phrase;
+      count.innerHTML = phrase;
       
     } else {  
-      result.innerHTML = 'Not enough for a random choice' }
+      count.innerHTML = 'Add at least 1 more game, please' };
  }
 
 
@@ -93,6 +104,7 @@ const chooseGame = () => {
 
 }
 
+
 document.getElementById('pickOne').addEventListener('click', function(event) {
   console.log('It worked!');
   event.preventDefault();
@@ -103,8 +115,9 @@ document.getElementById('pickOne').addEventListener('click', function(event) {
   //console.log(chooseGame());
 });
 
-
+/*
 //to close the edit box
 function closeInput() {
   document.getElementById('edit-box').style.display='none';
 }
+*/

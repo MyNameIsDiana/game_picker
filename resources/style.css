@@ -19,3 +19,19 @@ input[type='submit'], button {
     margin: auto;
     margin-top: 10px;
 }
+
+table {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: left;
+}
+
+
+.result {
+    text-align: center;
+}
+
+#chosenGame {
+    font-size: 40px;
+}
+
