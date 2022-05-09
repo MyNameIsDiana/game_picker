@@ -40,8 +40,15 @@ const app = new function() {
   this.add = function() {
     item = document.getElementById('add-game');
     const newGame = item.value;
+    //checks for accidental click with no text
     if (newGame) {
+      //checks for duplicate entry
+      if (this.games.indexOf(newGame) === -1) {
       this.games.push(newGame);
+      } else {
+        //this is just for me; might later display error message for the user
+        console.log("that's already included")
+      }
       //to clear the box
       item.value='';
       this.fetchAllTheGames();
