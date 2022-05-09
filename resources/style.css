@@ -26,16 +26,19 @@ table {
     text-align: left;
 }
 
-
-.result {
-    text-align: center;
-}
-
 #chosenGame {
     font-size: 40px;
 }
 
 #what-game {
     line-height: 1;
+}
 
+#result {
+    text-align: center;
+    visibility: visible;
+}
+
+#feelfree {
+    visibility: visible;
 }

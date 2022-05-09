@@ -28,10 +28,11 @@ const app = new function() {
         gamesSoFar += '<tr> <td>' + this.games[i] + '</td';
      //   gamesSoFar += '<td><button onclick="app.edit('+ i +')" class="btn btn-warning">Edit</button></td>'; 
         gamesSoFar += '<td><button onclick="app.delete('+ i +')" class="btn-sm btn-danger">Delete</button></td>'; 
-        gamesSoFar += '</tr>';
+        gamesSoFar += '</tr>'
       }
     }
     this.total(this.games.length);
+
     return this.item.innerHTML = gamesSoFar;
   };
   
@@ -78,10 +79,21 @@ const app = new function() {
     let count = document.getElementById('number-of-games');
     let phrase = `Choosing from ${arrayLength} games`;
     if (arrayLength >= 2) {
+      document.getElementById('result').style.visibility = "visible"; 
+
       count.innerHTML = phrase;
       
-    } else {  
-      count.innerHTML = 'Add at least 1 more game, please' };
+    } else if (arrayLength === 1) {  
+      document.getElementById('result').style.visibility = "hidden"; 
+
+      count.innerHTML = 'Add at least 1 more game, please';
+    } else {
+      document.getElementById('result').style.visibility = "hidden"; 
+      document.getElementById('feelFree').style.visibility = "hidden"; 
+
+      count.innerHTML = 'Add at least 2 games, please';
+    }
+
  }
 
 
@@ -91,29 +103,34 @@ const app = new function() {
 app.fetchAllTheGames();
 
 
+
+
+
 //pick a game from array
 
 const chooseGame = () => {
   let randomNumber = Math.floor(Math.random() * app.games.length);
+
+  //need to remove this logic and move it so the button doesn't display
   if (app.games.length > 0) {
     //app.games[randomNumber].innerHTML = chosenGame;
     let result = document.getElementById('chosenGame');
     result.innerHTML = app.games[randomNumber];
-
   }
-
+    
 }
 
 
-document.getElementById('pickOne').addEventListener('click', function(event) {
-  console.log('It worked!');
-  event.preventDefault();
-  //let fakey = "hello";
-  //fakey = document.getElementById('chosenGame');
-  //fakey.innerHTML = app.games;
-  chooseGame();
-  //console.log(chooseGame());
-});
+
+  document.getElementById('pickOne').addEventListener('click', function(event) {
+    console.log('It worked!');
+    event.preventDefault();
+    //let fakey = "hello";
+    //fakey = document.getElementById('chosenGame');
+    //fakey.innerHTML = app.games;
+    chooseGame();
+    //console.log(chooseGame());
+  });
 
 /*
 //to close the edit box
