@@ -42,3 +42,7 @@ table {
 #feelfree {
     visibility: visible;
 }
+
+body {
+    background-color: lightblue;
+  }
