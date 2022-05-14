@@ -134,8 +134,18 @@ const chooseGame = () => {
 }
 
 
-
   document.getElementById('pickOne').addEventListener('click', function(event) {
+    console.log('It worked!');
+    event.preventDefault();
+    //let fakey = "hello";
+    //fakey = document.getElementById('chosenGame');
+    //fakey.innerHTML = app.games;
+    chooseGame();
+    //console.log(chooseGame());
+  });
+
+  //if user clicks Pick Again in the modal
+  document.getElementById('pickAgain').addEventListener('click', function(event) {
     console.log('It worked!');
     event.preventDefault();
     //let fakey = "hello";

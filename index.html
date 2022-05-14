@@ -73,12 +73,16 @@
     </div>
 -->
     <div id="result">
+        <!--moved this into modal
         <h3>Let's play this:</h3>
+        -->
+        <br>
+        <br>
         <button id="pickOne"  class="btn btn-success" data-toggle="modal" data-target="#try-a-modal">Pick one</button>
         <!--display result of random choice-->
+        <!--moved this into modal
         <br>
         <br>
-        <!--
         <p id="chosenGame"></p> 
         -->
     <!--
@@ -91,19 +95,19 @@
 
   <!-- Modal -->
   <div class="modal fade" id="try-a-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modal-title">Modal title</h5>
+          <h5 class="modal-title" id="modal-title">Let's play this:</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <p id="chosenGame"></p> 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Great! We'll play it!</button>
+            <button id="pickAgain" type="button" class="btn btn-secondary" >Nah. Pick again!</button>
+          </div>
       </div>
     </div>
   </div>
