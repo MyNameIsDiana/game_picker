@@ -27,9 +27,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WantToPlayAGameWhatGame?</title>
     <link rel="icon" type="image/x-icon" href="resources/images/favicon.ico"/>
-    <link rel="stylesheet" href="resources/style.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 
+    <link rel="stylesheet" href="resources/style.css"/>
 </head>
 <body>
 
@@ -54,9 +57,12 @@
     <p id="feelFree">Feel free to remove my suggestions and add your own!</p>
     <form action="javascript:void(0);" method="POST" onsubmit="app.add()">
         <input type="text" id="add-game" placeholder="Add a game here">
-        <input type="submit" value="Add" class="btn btn-primary">
+        <input type="submit" value="&#xF4FE;" class="bi bi-plus"> 
+
+
     </form>
     </div>
+
 <!--
     <div id="edit-box">
         <form action="javascript:void(0);" method="POST" id="save-edit">
@@ -67,19 +73,52 @@
     </div>
 -->
     <div id="result">
+        <!--moved this into modal
         <h3>Let's play this:</h3>
-        <button id="pickOne"  class="btn btn-success">Pick one</button>
+        -->
+        <br>
+        <br>
+        <button id="pickOne"  class="btn btn-success" data-toggle="modal" data-target="#try-a-modal">Pick one</button>
         <!--display result of random choice-->
+        <!--moved this into modal
         <br>
         <br>
         <p id="chosenGame"></p> 
+        -->
     <!--
     button that refreshes page with new random choice
     <button type="submit" onClick="refreshPage()">Press for a new game</button>
     -->
     </div>
 
-    <script src="resources/js/script.js"></script>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="try-a-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title">Let's play this:</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p id="chosenGame"></p> 
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Great! We'll play it!</button>
+            <button id="pickAgain" type="button" class="btn btn-secondary" >Nah. Pick again!</button>
+          </div>
+      </div>
+    </div>
+  </div>
+    <!--end modal-->
+
+  
+
+<script src="resources/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>

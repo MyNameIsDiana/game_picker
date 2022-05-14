@@ -27,11 +27,17 @@ const app = new function() {
       for (i=0; i<this.games.length; i++) {
         gamesSoFar += '<tr> <td>' + this.games[i] + '</td';
      //   gamesSoFar += '<td><button onclick="app.edit('+ i +')" class="btn btn-warning">Edit</button></td>'; 
-        gamesSoFar += '<td><button onclick="app.delete('+ i +')" class="btn-sm btn-danger">Delete</button></td>'; 
+     //   gamesSoFar += '<td><button onclick="app.delete('+ i +')" class="btn-sm btn-danger">Delete</button></td>'; 
+        gamesSoFar += '<td><button type="button" class="btn" onclick="app.delete('+ i +')"><i class="bi bi-trash" style="color: red"></i></button></td>'; 
+
         gamesSoFar += '</tr>'
       }
     }
     this.total(this.games.length);
+    
+
+
+
 
     return this.item.innerHTML = gamesSoFar;
   };
@@ -128,8 +134,18 @@ const chooseGame = () => {
 }
 
 
-
   document.getElementById('pickOne').addEventListener('click', function(event) {
+    console.log('It worked!');
+    event.preventDefault();
+    //let fakey = "hello";
+    //fakey = document.getElementById('chosenGame');
+    //fakey.innerHTML = app.games;
+    chooseGame();
+    //console.log(chooseGame());
+  });
+
+  //if user clicks Pick Again in the modal
+  document.getElementById('pickAgain').addEventListener('click', function(event) {
     console.log('It worked!');
     event.preventDefault();
     //let fakey = "hello";
