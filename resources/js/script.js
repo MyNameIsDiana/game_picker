@@ -146,7 +146,7 @@ const chooseGame = () => {
 
   //if user clicks Pick Again in the modal
   document.getElementById('pickAgain').addEventListener('click', function(event) {
-    console.log('It worked!');
+    console.log('It worked in the modal!');
     event.preventDefault();
     //let fakey = "hello";
     //fakey = document.getElementById('chosenGame');
