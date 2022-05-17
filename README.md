@@ -15,3 +15,12 @@ So we have learned to ask it this way, with no breaks between words:
 We are all eager to play something but no one wants to choose the game.
 
 This app is for my family. 
+
+---
+
+ISSUES:
+The X in upper right corner of the modal isn't responding. Why not?
+
+The plus icon to the right of the "Add a game here" box isn't displaying correctly. Why does it look like a big hamburger menu?
+
+Need to make it all look nicer. Work on that after the other issues are fixed.
