@@ -25,7 +25,7 @@ const app = new function() {
 
     if (this.games.length > 0) {
       for (i=0; i<this.games.length; i++) {
-        gamesSoFar += '<tr> <td>' + this.games[i] + '</td';
+        gamesSoFar += '<tr> <td>' + this.games[i] + '</td>';
      //   gamesSoFar += '<td><button onclick="app.edit('+ i +')" class="btn btn-warning">Edit</button></td>'; 
      //   gamesSoFar += '<td><button onclick="app.delete('+ i +')" class="btn-sm btn-danger">Delete</button></td>'; 
         gamesSoFar += '<td><button type="button" class="btn" onclick="app.delete('+ i +')"><i class="bi bi-trash" style="color: red"></i></button></td>'; 
