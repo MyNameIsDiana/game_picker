@@ -25,6 +25,4 @@ Try it here:  https://mynameisdiana.github.io/game_picker/
 ISSUES:
 The X in upper right corner of the modal isn't responding. Why not? Maybe something in my CSS is a conflict with Bootstrap modal.
 
-The plus icon to the right of the "Add a game here" box isn't displaying correctly. Why does it look like a big hamburger menu?
-
 Need to make it all look nicer. Work on that after the other issues are fixed.
