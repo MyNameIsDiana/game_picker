@@ -28,7 +28,7 @@ const app = new function() {
         gamesSoFar += '<tr> <td>' + this.games[i] + '</td>';
      //   gamesSoFar += '<td><button onclick="app.edit('+ i +')" class="btn btn-warning">Edit</button></td>'; 
      //   gamesSoFar += '<td><button onclick="app.delete('+ i +')" class="btn-sm btn-danger">Delete</button></td>'; 
-        gamesSoFar += '<td><button type="button" class="btn" onclick="app.delete('+ i +')"><i class="bi bi-trash" style="color: red"></i></button></td>'; 
+        gamesSoFar += '<td><button type="button" class="btn" onclick="app.delete('+ i +')"><i class="bi bi-trash" style="color: black"></i></button></td>'; 
 
         gamesSoFar += '</tr>'
       }
