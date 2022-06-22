@@ -51,9 +51,12 @@ const app = new function() {
       //checks for duplicate entry
       if (this.games.indexOf(newGame) === -1) {
       this.games.push(newGame);
+      item.placeholder = "Add a game here";
       } else {
         //this is just for me; might later display error message for the user
-        console.log("that's already included")
+        console.log("that's already included");
+        item.placeholder = "No, a DIFFERENT game!";
+
       }
       //to clear the box
       item.value='';
