@@ -131,7 +131,7 @@ const chooseGame = () => {
   if (app.games.length > 0) {
     //app.games[randomNumber].innerHTML = chosenGame;
     let result = document.getElementById('chosenGame');
-    result.innerHTML = app.games[randomNumber];
+    result.innerHTML = "Let's play " + app.games[randomNumber].toUpperCase();
   }
     
 }
