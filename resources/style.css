@@ -48,3 +48,21 @@ table {
 body {
     background-color: lightyellow;
 }
+
+
+.modal .modal-popout-bg {
+    background-image: url("images/background-games.jpg");
+    background-repeat: no-repeat;
+    background-size: 800px;
+}
+
+.modal .modal-body{
+    background-color: white;
+    opacity: 70%;
+}
+
+.modal .modal-header {
+    background-color: white;
+    opacity: 20%;
+
+}
